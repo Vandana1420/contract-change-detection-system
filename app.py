@@ -19,19 +19,29 @@ if clicked:
             st.subheader("OLD Contract", divider=True)
         with colC:
             st.subheader("NEW Contract", divider=True)
+        
         for line1, line2 in zip(lines1, lines2):
-            if line1 != line2:
+            if line1.strip() != line2.strip():
                 with colA:
                     st.markdown(f"<span style='color: red;'>{line1}</span>", unsafe_allow_html=True)
                 with colC:
                     st.markdown(f"<span style='color: green;'>{line2}</span>", unsafe_allow_html=True)
             else:
                 with colA:
-                    st.write(line1)
+                    st.write(line1.strip())
                 with colC:
-                    st.write(line2)
-        # with colB:
-        #     st.subheader("NEW Contract")
-        #     st.write(lines2)
+                    st.write(line2.strip())
+        if len(lines2) > len(lines1):
+            for i in range(len(lines1), len(lines2)):
+                with colA:
+                    st.write("")   # empty placeholder
+                with colC:
+                    st.markdown(f"<span style='color:green'>{lines2[i]}</span>", unsafe_allow_html=True)
+        if len(lines1) > len(lines2):
+            for i in range(len(lines2), len(lines1)):
+                with colA:
+                    st.markdown(f"<span style='color:red'>{lines1[i]}</span>", unsafe_allow_html=True)
+                with colC:
+                    st.write("")
     else:
         st.error("Please upload both contract versions to analyze changes.")
