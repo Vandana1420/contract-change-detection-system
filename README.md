@@ -36,9 +36,11 @@ A lightweight web application that compares two versions of a contract and highl
 - HTML styling (for colored diff display)
 
 ## Demo
+Live Demo Link
+https://contract-change-detection-system.streamlit.app/
 ![App Screenshot](assets/demo.png)
 
-https://contract-change-detection-system.streamlit.app/
+
 
 
 
