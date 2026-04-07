@@ -38,6 +38,8 @@ A lightweight web application that compares two versions of a contract and highl
 ## Demo
 ![App Screenshot](assets/demo.png)
 
+https://contract-change-detection-system.streamlit.app/
+
 
 
 ## 📦Installation & Run
