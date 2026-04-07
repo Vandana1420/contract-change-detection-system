@@ -36,9 +36,7 @@ A lightweight web application that compares two versions of a contract and highl
 - HTML styling (for colored diff display)
 
 ## Demo
-
-
-
+![App Screenshot](assets/demo.png)
 
 
 
